@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using Api.Infrastructure;
+using Api.Models;
 using Api.Tests.ContextHelpers;
 
 namespace Api.Controllers
@@ -15,8 +16,8 @@ namespace Api.Controllers
         public readonly IFirstDbContext context;
         public UsersController()
         {
-            this.context = new FakeFirstDbContext();
-            //this.context = new FirstDbContext();
+            //this.context = new FakeFirstDbContext();
+            this.context = new FirstDbContext();
         }
 
         public UsersController(IFirstDbContext context)
@@ -28,9 +29,16 @@ namespace Api.Controllers
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var users = context.Users.ToList();
+            try
+            {
+                var users = context.Users.ToList();
 
-            return Request.CreateResponse(HttpStatusCode.OK, users);
+                return Request.CreateResponse(HttpStatusCode.OK, users);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Message);
+            }
         }
 
         // GET api/Users/5
