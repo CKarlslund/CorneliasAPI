@@ -1,6 +1,6 @@
-﻿using Api.Core.User;
-using Api.Infrastructure;
+﻿using Api.Infrastructure;
 using System.Data.Entity;
+using Api.Core.VampireEntities;
 
 namespace Api.Tests.ContextHelpers
 {

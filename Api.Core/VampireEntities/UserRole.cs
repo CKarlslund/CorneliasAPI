@@ -1,4 +1,4 @@
-﻿namespace Api.Core.User
+﻿namespace Api.Core.VampireEntities
 {
     public enum UserRole
     {

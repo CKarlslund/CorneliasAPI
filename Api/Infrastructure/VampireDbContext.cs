@@ -1,5 +1,5 @@
-﻿using Api.Core.User;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using Api.Core.VampireEntities;
 
 namespace Api.Infrastructure
 {

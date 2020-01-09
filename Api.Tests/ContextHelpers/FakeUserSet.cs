@@ -1,5 +1,5 @@
-﻿using Api.Core.User;
-using System.Linq;
+﻿using System.Linq;
+using Api.Core.VampireEntities;
 
 namespace Api.Tests.ContextHelpers
 {

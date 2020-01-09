@@ -1,5 +1,4 @@
 ﻿using Api.Controllers;
-using Api.Core.User;
 using Api.Infrastructure;
 using Api.Tests.ContextHelpers;
 using System.Collections.Generic;
@@ -7,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using Api.Core.VampireEntities;
 using Xunit;
 
 namespace Api.Tests.ControllerTests

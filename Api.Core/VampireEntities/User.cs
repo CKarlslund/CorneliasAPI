@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Api.Core.User
+namespace Api.Core.VampireEntities
 {
     public class User
     {
@@ -9,15 +9,6 @@ namespace Api.Core.User
         public string Password { get; set; }
         public UserRole Role { get; set; }
         public ICollection<Character> Characters { get; set; }
-    }
-    
-    public class Character
-    {
-        public int CharacterId { get; set; }
-        public string Name { get; set; }
-
-        public int UserId { get; set; }
-
     }
 
     public class UserDTO
