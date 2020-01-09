@@ -179,7 +179,7 @@
     <Compile Include="Infrastructure\VampireDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ContextHelpers\FakeDbSet.cs" />
-    <Compile Include="Tests\ContextHelpers\FakeFirstDbContext.cs" />
+    <Compile Include="Tests\ContextHelpers\FakeVampireDbContext.cs" />
     <Compile Include="Tests\ContextHelpers\FakeUserSet.cs" />
     <Compile Include="Tests\ControllerTests\UsersControllerTests.cs" />
   </ItemGroup>
