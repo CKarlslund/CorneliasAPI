@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using Api.Infrastructure;
-using Api.Models;
+using Api.Core.User;
 using Api.Tests.ContextHelpers;
 
 namespace Api.Controllers
@@ -37,7 +37,7 @@ namespace Api.Controllers
             }
             catch (Exception e)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Message);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Message); 
             }
         }
 
@@ -45,7 +45,7 @@ namespace Api.Controllers
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
-            var user = context.Users.FirstOrDefault(u => u.UserId == id);
+            var user = context.Users.ToList().FirstOrDefault(u => u.UserId == id);
 
             return Request.CreateResponse(HttpStatusCode.OK, user);
         }

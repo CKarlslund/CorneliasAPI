@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Api.Core.User;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using Api.Models;
 
 namespace Api.Infrastructure
 {

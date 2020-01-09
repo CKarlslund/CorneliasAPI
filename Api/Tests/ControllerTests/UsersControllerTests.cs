@@ -1,15 +1,12 @@
-﻿using System;
+﻿using Api.Controllers;
+using Api.Core.User;
+using Api.Infrastructure;
+using Api.Tests.ContextHelpers;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
-using System.Web;
 using System.Web.Http;
-using Api.Controllers;
-using Api.Infrastructure;
-using Api.Models;
-using Api.Tests.ContextHelpers;
 using Xunit;
 
 namespace Api.Tests.ControllerTests

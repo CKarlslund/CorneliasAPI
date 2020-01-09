@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using Api.Core.User;
 using Api.Infrastructure;
-using Api.Models;
+using System.Data.Entity;
 
 namespace Api.Tests.ContextHelpers
 {
