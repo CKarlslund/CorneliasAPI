@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -31,7 +32,7 @@ namespace Api.Controllers
         {
             try
             {
-                var users = context.Users.ToList();
+                var users = context.Users.Include(u => u.Characters).ToList();
 
                 return Request.CreateResponse(HttpStatusCode.OK, users);
             }

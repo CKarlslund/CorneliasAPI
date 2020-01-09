@@ -20,6 +20,6 @@ namespace Api.Infrastructure
         }
 
         public IDbSet<User> Users { get; set; }
-        public IDbSet<Character> Characters { get; set; }
+	    public IDbSet<Character> Characters { get; set; }
     }
 }
