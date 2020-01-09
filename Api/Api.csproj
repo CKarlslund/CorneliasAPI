@@ -176,13 +176,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\VampireDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\apiprofilerelease.pubxml" />
+    <None Include="Properties\PublishProfiles\ApiReleaseProfile.pubxml" />
     <None Include="Properties\PublishProfiles\MainPageReleaseProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Releaseprofil.pubxml" />
     <Content Include="Web.config" />
@@ -192,7 +192,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\releaseProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -207,6 +206,10 @@
     <ProjectReference Include="..\Api.Core\Api.Core.csproj">
       <Project>{e08fc86f-c70d-4610-a961-d17e69932dbe}</Project>
       <Name>Api.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Api.Infrastructure\Api.Infrastructure.csproj">
+      <Project>{A24BD898-DA8C-4DEC-A8CA-243FA048EB9F}</Project>
+      <Name>Api.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

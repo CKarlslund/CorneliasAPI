@@ -95,6 +95,10 @@
       <Project>{E08FC86F-C70D-4610-A961-D17E69932DBE}</Project>
       <Name>Api.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Api.Infrastructure\Api.Infrastructure.csproj">
+      <Project>{A24BD898-DA8C-4DEC-A8CA-243FA048EB9F}</Project>
+      <Name>Api.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Api\Api.csproj">
       <Project>{5CE50EAD-3115-4D1A-B048-C2786BBB4715}</Project>
       <Name>Api</Name>
