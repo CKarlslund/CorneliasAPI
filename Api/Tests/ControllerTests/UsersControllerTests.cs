@@ -16,7 +16,7 @@ namespace Api.Tests.ControllerTests
         [Fact]
         public void DoTheThing()
         {
-            var controller = new UsersController(new FakeFirstDbContext())
+            var controller = new UsersController(new FakeVampireDbContext())
             {
                 Request = new System.Net.Http.HttpRequestMessage(),
                 Configuration = new HttpConfiguration()
@@ -40,7 +40,7 @@ namespace Api.Tests.ControllerTests
         [Fact]
         public void DoTheThingWithRealDatabase()
         {
-            var controller = new UsersController(new FirstDbContext())
+            var controller = new UsersController(new VampireDbContext())
             {
                 Request = new System.Net.Http.HttpRequestMessage(),
                 Configuration = new HttpConfiguration()

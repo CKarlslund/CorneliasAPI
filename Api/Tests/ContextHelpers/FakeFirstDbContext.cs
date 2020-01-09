@@ -4,14 +4,16 @@ using System.Data.Entity;
 
 namespace Api.Tests.ContextHelpers
 {
-    public class FakeFirstDbContext : IFirstDbContext
+    public class FakeVampireDbContext : IVampireDbContext
     {
-        public FakeFirstDbContext()
+        public FakeVampireDbContext()
         {
             this.Users = GetFakeUsers();
         }
 
         public IDbSet<User> Users { get; private set; }
+        public IDbSet<Character> Characters { get; private set; }
+
         public int SaveChanges()
         {
             return 0;

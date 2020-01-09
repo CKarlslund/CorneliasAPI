@@ -13,14 +13,14 @@ namespace Api.Controllers
 {
     public class UsersController : ApiController
     {
-        public readonly IFirstDbContext context;
+        public readonly IVampireDbContext context;
         public UsersController()
         {
             //this.context = new FakeFirstDbContext();
-            this.context = new FirstDbContext();
+            this.context = new VampireDbContext();
         }
 
-        public UsersController(IFirstDbContext context)
+        public UsersController(IVampireDbContext context)
         {
             this.context = context;
         }
