@@ -14,7 +14,7 @@ namespace Api.Tests.ControllerTests
     public class UserControllerTests
     {
         [Fact]
-        public void DoTheThing()
+        public void Should_get_uses_from_fake_database()
         {
             var controller = new UsersController(new FakeVampireDbContext())
             {
@@ -38,7 +38,7 @@ namespace Api.Tests.ControllerTests
         }
 
         [Fact]
-        public void DoTheThingWithRealDatabase()
+        public void Should_get_users_from_real_database()
         {
             var controller = new UsersController(new VampireDbContext())
             {

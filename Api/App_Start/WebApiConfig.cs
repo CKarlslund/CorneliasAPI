@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Api
 {
@@ -9,9 +10,10 @@ namespace Api
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            var corsAttr = new EnableCorsAttribute("http://www.traumatiserad.se", "*", "*");
 
-            // Web API routes
+            config.EnableCors(corsAttr);
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

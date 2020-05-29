@@ -1,17 +1,16 @@
-﻿using System;
+﻿using Api.Infrastructure;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-using Api.Infrastructure;
-
 namespace Api.Controllers
 {
     public class UsersController : ApiController
     {
-        public readonly IVampireDbContext context;
+        private readonly IVampireDbContext context;
         public UsersController()
         {
             //this.context = new FakeFirstDbContext();
