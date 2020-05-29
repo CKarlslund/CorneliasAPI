@@ -10,7 +10,7 @@ namespace Api
     {
         public static void Register(HttpConfiguration config)
         {
-            var corsAttr = new EnableCorsAttribute("http://www.traumatiserad.se", "*", "*");
+            var corsAttr = new EnableCorsAttribute("https://www.traumatiserad.se", "*", "*");
 
             config.EnableCors(corsAttr);
 
